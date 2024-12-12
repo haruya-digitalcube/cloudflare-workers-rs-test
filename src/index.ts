@@ -13,6 +13,6 @@
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World from GitHub Actions!', {);
+		return new Response('Hello World from GitHub Actions !');
 	},
 } satisfies ExportedHandler<Env>;
