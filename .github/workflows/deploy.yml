@@ -30,8 +30,10 @@ jobs:
           set -x
           date
           hostname
+          docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:1.7.3
       - name: with out set -x
         run: |
           date
           hostname
+          docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:1.7.3
     
