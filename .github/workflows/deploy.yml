@@ -5,22 +5,22 @@ on:
     branches:
       - main
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - uses: actions/checkout@v3
-      - name: Deploy
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   name: Deploy
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Deploy
+  #       uses: cloudflare/wrangler-action@v3
+  #       with:
+  #         apiToken: ${{ secrets.CF_API_TOKEN }}
+  #         accountId: ${{ secrets.CF_ACCOUNT_ID }}
+      
   test-job:
     runs-on: ubuntu-latest
     name: TestJob
     steps:
       - run: |
           date
-          set -x
           date
     
