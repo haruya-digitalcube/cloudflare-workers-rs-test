@@ -1,5 +1,6 @@
 name: Deploy
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,3 +15,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
+      - run: |
+          date
+          set -x
+          date
+    
