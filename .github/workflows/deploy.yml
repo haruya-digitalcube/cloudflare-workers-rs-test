@@ -1,4 +1,9 @@
 name: Deploy
+
+defaults:
+  run:
+    shell: bash
+
 on:
   workflow_dispatch:
   push:
@@ -19,8 +24,12 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     name: TestJob
-    steps:
-      - run: |
+    steps: 
+      - name: with set -x
+        run: |
+          set -x
           date
+      - name: with out set -x
+        run: |
           date
     
