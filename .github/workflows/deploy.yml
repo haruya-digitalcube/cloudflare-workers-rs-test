@@ -29,7 +29,9 @@ jobs:
         run: |
           set -x
           date
+          hostname
       - name: with out set -x
         run: |
           date
+          hostname
     
